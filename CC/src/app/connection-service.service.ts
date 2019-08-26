@@ -1,29 +1,32 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConnectionServiceService {
+  list: any;
 
   constructor() { }
 
-  getCurrentUser(): User {
-    return this.user.value;
+  getCurrentUser(): List {
+    return this.list.value;
   }
 
-  register(user: User): Observable<User> {
-    user.role = 'user';
-    return this.http.post<User>(environment.url + '/auth/users/', user, httpOptions)
-      .pipe(catchError(this.handleError));
+  register(list: List): Observable<List> {
+    list.role = 'list';
+    return this.http.post<List>(environment.url + '/auth/users/', list, httpOptions)
+      // .pipe(catchError(this.handleError));
   }
 
-  getAllUsers(): Observable<User[]> {
-    return this.http.get<User[]>(environment.url + '/auth/users/', httpOptions)
-      .pipe(catchError(this.handleError));
+  getAllLists(): Observable<List[]> {
+    return this.http.get<List[]>(environment.url + '/auth/users/', httpOptions)
+      // .pipe(catchError(this.handleError));
   }
 
-  updateProfile(user: User): Observable<User> {
-    return this.http.put<User>(environment.url + '/auth/users/', user, httpOptions)
-      .pipe(catchError(this.handleError));
+  updateProfile(list: List): Observable<List> {
+    return this.http.put<List>(environment.url + '/auth/users/', list, httpOptions)
+      // .pipe(catchError(this.handleError));
   }
 }

@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class GroceryListComponent implements OnInit {
 a=false;
 item='';
+type='';
 n=-1;
 items=[];
+types=[];
  myFunc(a){
    this.a=true;
-   this.items.push(this.item);
+   this.items.push(this.item+ " is a "+this.type);
    console.log(this.a);
  }
  remove(index){

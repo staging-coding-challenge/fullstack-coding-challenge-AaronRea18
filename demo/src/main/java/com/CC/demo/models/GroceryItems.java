@@ -6,11 +6,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 
 
 
 @Table
-
+@Component
 public class GroceryItems {
 
 	@Id

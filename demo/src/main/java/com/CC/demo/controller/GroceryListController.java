@@ -40,10 +40,10 @@ public class GroceryListController {
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
-	public GroceryList registerGroceryItem(@RequestBody GroceryList user) {
-		if (GroceryListService.addGroceryItem(user) == null)
-			return user;
-		return user;
+	public GroceryList registerGroceryItem(@RequestBody GroceryList list) {
+		if (GroceryListService.addGroceryItem(list) == null)
+			return list;
+		return list;
 	}
 	
 
@@ -68,10 +68,10 @@ public class GroceryListController {
 //	POST /grocery-lists to create a new grocery list
 		@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 		@ResponseStatus(HttpStatus.CREATED)
-		public GroceryList registerGroceryList(@RequestBody GroceryList user) {
-			if (GroceryListService.addGroceryItem(user) == null)
-			return user;
-			return user;
+		public GroceryList registerGroceryList(@RequestBody GroceryList list) {
+			if (GroceryListService.addGroceryItem(list) == null)
+			return list;
+			return list;
 		}
 
 		
@@ -80,8 +80,8 @@ public class GroceryListController {
 		@DeleteMapping(value = "/id/{id}")
 		@ResponseStatus(HttpStatus.OK)
 		public void deleteUser(@PathVariable int id) {
-			GroceryList user = GroceryListService.findById(id);
-			if (!GroceryListService.deleteGrocerItemById(user.getGroceryListID()));
+			GroceryList list = GroceryListService.findById(id);
+			if (!GroceryListService.deleteGrocerItemById(list.getGroceryListID()));
 			
 			}
 

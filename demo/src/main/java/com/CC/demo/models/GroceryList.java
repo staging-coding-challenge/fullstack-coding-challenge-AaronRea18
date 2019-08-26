@@ -3,10 +3,12 @@ package com.CC.demo.models;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
 @Table
+@Component
 public class GroceryList {
 
 	@Id

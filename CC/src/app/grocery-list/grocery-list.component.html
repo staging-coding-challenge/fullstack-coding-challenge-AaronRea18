@@ -2,7 +2,6 @@
     grocery list with a form for adding a new item, 
     there should also be an option next to each item that allows you to remove items. (20 of the poitns).</p> -->
     <button routerLink="/GroceryLists" type="button" class="button">Return to GroceryLists</button>
-
  <div *ngIf = "this.a==true">
 
     <li *ngFor="let item of items"> 
@@ -10,15 +9,9 @@
 </div>
 
  <h1> Add Item </h1>
- <p>Please insert Name and type</p>
+ <p>Please insert Name and Type</p>
  
- <input [(ngModel)]="item">
- <button type="button" class="button" id="add" (click)="myFunc()">Add</button>
+ <p>Item  <input [(ngModel)]="item"> </p>
 
-
-<!-- <div *ngIf = "a!=0&& a<.1">
-    <img src ="..\..\assets\Kitty1.jpg">
-<br>
-    <button (click)="rightResponse($event)" (click)="randomAnimal($event)">Save</button>
-    <button (click)="wrongResponse($event)" (click)="randomAnimal($event)">Avoid</button>
-</div> -->
+ <p>Type <input [(ngModel)]="type"> </p> 
+  <button type="button" class="button" id="add" (click)="myFunc()">Add</button>
