@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+
+    /* background-color: rgb(42, 151, 187); */
+    background-color: rgb(207, 205, 63);
+   
+    /* background-image: url("assets\Big Lightning.jpg"); */
+    /* background-image: url("assets\no lightning.jpg"); */
+    /* background-image: url("assets\Small Lightning.jpg"); */
+    /* background-image: url("assets\Massive Lightning.jpg"); */
+    background-size: cover;
+    text-align: center;
+
+    
+}
